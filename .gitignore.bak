@@ -1,0 +1,11 @@
+#ignore all kind of files
+*.*
+!.gitattributes
+!.gitignore
+!readme.md
+#except py files
+!*.py
+!*.txt
+!*.yml
+!*.ipynb
+!*.json
