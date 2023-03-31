@@ -104,24 +104,24 @@ def compare_columns(pair):
     #pair = j['pair']
     try:
         if portal == 'SG':
-            table_1 = readCSVFromZipSG(pair['leftTableDoc'])
+            table_1 = readCSVFromZipSG(pair['leftTableDoc'])['df']
             table_1.columns = list(range(0, table_1.shape[1]))
-            table_2 = readCSVFromZipSG(pair['rightTableDoc'])
+            table_2 = readCSVFromZipSG(pair['rightTableDoc'])['df']
             table_2.columns = list(range(0, table_2.shape[1]))
         elif portal == 'CA':
-            table_1 = readCSVFromZipCA(pair['leftTableDoc'])
+            table_1 = readCSVFromZipCA(pair['leftTableDoc'])['df']
             table_1.columns = list(range(0, table_1.shape[1]))
-            table_2 = readCSVFromZipCA(pair['rightTableDoc'])
+            table_2 = readCSVFromZipCA(pair['rightTableDoc'])['df']
             table_2.columns = list(range(0, table_2.shape[1]))
         elif portal == 'UK':
-            table_1 = readCSVFromZipUK(pair['leftTableDoc'])
+            table_1 = readCSVFromZipUK(pair['leftTableDoc'])['df']
             table_1.columns = list(range(0, table_1.shape[1]))
-            table_2 = readCSVFromZipUK(pair['rightTableDoc'])
+            table_2 = readCSVFromZipUK(pair['rightTableDoc'])['df']
             table_2.columns = list(range(0, table_2.shape[1]))
         elif portal == 'US':
-            table_1 = readCSVFromZipUS(pair['leftTableDoc'])
+            table_1 = readCSVFromZipUS(pair['leftTableDoc'])['df']
             table_1.columns = list(range(0, table_1.shape[1]))
-            table_2 = readCSVFromZipUS(pair['rightTableDoc'])
+            table_2 = readCSVFromZipUS(pair['rightTableDoc'])['df']
             table_2.columns = list(range(0, table_2.shape[1]))
 
         query_string = 'CREATE VIEW %s AS\
